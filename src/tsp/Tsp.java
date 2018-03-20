@@ -15,7 +15,8 @@ public class Tsp {
             System.out.println("Press\n" +
                     "0. To Exit.\n" +
                     "1. To add city.\n" +
-                    "2. To print cities.");
+                    "2. To print cities.\n" +
+                    "3. Calculate distance between 2 cities.\n");
 
             chosenOption = reader.nextInt();
             switch (chosenOption){
@@ -24,6 +25,9 @@ public class Tsp {
                     break;
                 case 2:
                     printCities();
+                    break;
+                case 3:
+                    System.out.println(calculateDistance(cities.get(0), cities.get(1)));
                     break;
 
                 default:
@@ -35,8 +39,8 @@ public class Tsp {
 
     private static void addCity(){
         int number;
-        float coordinateX;
-        float coordinateY;
+        double coordinateX;
+        double coordinateY;
         Scanner reader = new Scanner(System.in);
 
         System.out.println("Enter city number");
@@ -57,5 +61,15 @@ public class Tsp {
         for(City city: cities){
             System.out.println(city.getCityNumber() + "\t\t\t" + city.getCoordinateX() + "\t\t\t" + city.getCoordinateY());
         }
+    }
+
+    private static double calculateDistance(City firstCity, City secondCity){
+        double result = 0;
+
+        result = (secondCity.getCoordinateX() - firstCity.getCoordinateX()) * (secondCity.getCoordinateX() - firstCity.getCoordinateX());
+        result += (secondCity.getCoordinateY() - firstCity.getCoordinateY()) * (secondCity.getCoordinateY() - firstCity.getCoordinateY());
+        result = Math.sqrt(result);
+
+        return result;
     }
 }

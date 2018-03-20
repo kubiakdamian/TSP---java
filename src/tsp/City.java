@@ -1,7 +1,7 @@
 package tsp;
 
 public class City {
-    public City(int cityNumber, float coordinateX, float coordinateY) {
+    public City(int cityNumber, double coordinateX, double coordinateY) {
         this.cityNumber = cityNumber;
         this.coordinateX = coordinateX;
         this.coordinateY = coordinateY;
@@ -15,23 +15,23 @@ public class City {
         this.cityNumber = cityNumber;
     }
 
-    public float getCoordinateX() {
+    public double getCoordinateX() {
         return coordinateX;
     }
 
-    public void setCoordinateX(float coordinateX) {
+    public void setCoordinateX(double coordinateX) {
         this.coordinateX = coordinateX;
     }
 
-    public float getCoordinateY() {
+    public double getCoordinateY() {
         return coordinateY;
     }
 
-    public void setCoordinateY(float coordinateY) {
+    public void setCoordinateY(double coordinateY) {
         this.coordinateY = coordinateY;
     }
 
     private int cityNumber;
-    private float coordinateX;
-    private float coordinateY;
+    private double coordinateX;
+    private double coordinateY;
 }
