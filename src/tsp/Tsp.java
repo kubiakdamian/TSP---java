@@ -3,10 +3,10 @@ package tsp;
 import java.util.Scanner;
 
 public class Tsp {
+    static final Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args){
         int chosenOption = 100;
-        Scanner reader = new Scanner(System.in);
 
         while(chosenOption != 0){
             System.out.println("Press\n" +
@@ -15,7 +15,7 @@ public class Tsp {
                     "2. To print cities.\n" +
                     "3. Calculate distance between 2 cities.\n");
 
-            chosenOption = reader.nextInt();
+            chosenOption = scan.nextInt();
             switch (chosenOption){
                 case 1:
                     Cities.addCity();
@@ -24,12 +24,13 @@ public class Tsp {
                     Cities.printCities();
                     break;
                 case 3:
-                    System.out.println(Distance.calculateDistance(Cities.getCities().get(0), Cities.getCities().get(1)));
+                    System.out.println(Distance.calculateDistance());
                     break;
                 default:
                     break;
             }
         }
-        reader.close();
+
+        scan.close();
     }
 }

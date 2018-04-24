@@ -1,8 +1,12 @@
 package tsp;
 
 public class City {
-    public City(int cityNumber, double coordinateX, double coordinateY) {
-        this.cityNumber = cityNumber;
+    private int cityNumber;
+    private double coordinateX;
+    private double coordinateY;
+
+    public City(double coordinateX, double coordinateY) {
+        this.cityNumber = Cities.getCities().size();
         this.coordinateX = coordinateX;
         this.coordinateY = coordinateY;
     }
@@ -18,8 +22,4 @@ public class City {
     public double getCoordinateY() {
         return coordinateY;
     }
-
-    private int cityNumber;
-    private double coordinateX;
-    private double coordinateY;
 }
