@@ -11,24 +11,12 @@ public class City {
         return cityNumber;
     }
 
-    public void setCityNumber(int cityNumber) {
-        this.cityNumber = cityNumber;
-    }
-
     public double getCoordinateX() {
         return coordinateX;
     }
 
-    public void setCoordinateX(double coordinateX) {
-        this.coordinateX = coordinateX;
-    }
-
     public double getCoordinateY() {
         return coordinateY;
-    }
-
-    public void setCoordinateY(double coordinateY) {
-        this.coordinateY = coordinateY;
     }
 
     private int cityNumber;
