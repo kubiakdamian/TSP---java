@@ -17,7 +17,7 @@ public class Distance {
         return Tsp.scan.nextInt();
     }
 
-    private static double makeCalculations(City firstCity, City secondCity){
+    public static double makeCalculations(City firstCity, City secondCity){
         double result;
 
         result = (secondCity.getCoordinateX() - firstCity.getCoordinateX()) * (secondCity.getCoordinateX() - firstCity.getCoordinateX());

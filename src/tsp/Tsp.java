@@ -13,7 +13,8 @@ public class Tsp {
                     "0. To Exit.\n" +
                     "1. To add city.\n" +
                     "2. To print cities.\n" +
-                    "3. Calculate distance between 2 cities.\n");
+                    "3. Calculate distance between 2 cities.\n" +
+                    "4. Calculate whole distance with shortest path\n");
 
             chosenOption = scan.nextInt();
             switch (chosenOption){
@@ -26,6 +27,8 @@ public class Tsp {
                 case 3:
                     System.out.println(Distance.calculateDistance());
                     break;
+                case 4:
+                    System.out.println(ShortestPath.findShortestPath(0));
                 default:
                     break;
             }

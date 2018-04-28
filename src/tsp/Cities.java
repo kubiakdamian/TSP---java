@@ -9,7 +9,6 @@ public class Cities {
 
     private static ArrayList<City> cities = new ArrayList<>();
 
-
     public static void addCity(){
         double coordinateX = getCoordinateX();
         double coordinateY = getCoordinateY();
