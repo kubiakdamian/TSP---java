@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42034b56-1729-42d3-86a6-76b6edf23758" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/tsp/BruteForce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tsp/BruteForce.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tsp/Tsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tsp/Tsp.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -18,69 +17,8 @@
       <file leaf-file-name="Tsp.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/tsp/Tsp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="34" column="118" selection-start-line="34" selection-start-column="118" selection-end-line="34" selection-end-column="118" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BruteForce.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tsp/BruteForce.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShortestPath.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tsp/ShortestPath.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="41" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Distance.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tsp/Distance.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="75" selection-start-line="19" selection-start-column="75" selection-end-line="19" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Cities.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tsp/Cities.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
-              <folding>
-                <element signature="e#111#112#0" expanded="true" />
-                <element signature="e#140#141#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="City.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tsp/City.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="18" lean-forward="true" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-              <folding>
-                <element signature="e#419#420#0" expanded="true" />
-                <element signature="e#452#453#0" expanded="true" />
-                <element signature="e#490#491#0" expanded="true" />
-                <element signature="e#524#525#0" expanded="true" />
-                <element signature="e#562#563#0" expanded="true" />
-                <element signature="e#596#597#0" expanded="true" />
-                <element signature="e#630#631#0" expanded="true" />
-                <element signature="e#662#663#0" expanded="true" />
-                <element signature="e#709#710#0" expanded="true" />
-                <element signature="e#744#745#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1139">
+              <caret line="67" column="75" selection-start-line="67" selection-start-column="75" selection-end-line="67" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -269,12 +207,12 @@
       <workItem from="1524584058139" duration="3076000" />
       <workItem from="1524601800994" duration="2934000" />
       <workItem from="1524677464298" duration="624000" />
-      <workItem from="1529752674140" duration="12489000" />
+      <workItem from="1529752674140" duration="14766000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28042000" />
+    <option name="totallyTimeSpent" value="30319000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -662,8 +600,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tsp/Tsp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="34" column="118" selection-start-line="34" selection-start-column="118" selection-end-line="34" selection-end-column="118" />
+        <state relative-caret-position="1139">
+          <caret line="67" column="75" selection-start-line="67" selection-start-column="75" selection-end-line="67" selection-end-column="75" />
         </state>
       </provider>
     </entry>

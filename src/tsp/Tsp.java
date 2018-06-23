@@ -29,10 +29,10 @@ public class Tsp {
                     System.out.println(Distance.calculateDistance());
                     break;
                 case 4:
-                    System.out.println(ShortestPath.findShortestPath(getCityNumber()));
+                    shortestPathCalculation();
                     break;
                 case 5:
-                    System.out.println(BruteForce.findShortestPath(Cities.getArrayWithCitiesNumbers(), getCityNumber()));
+                    bruteForceCalculation();
                 default:
                     break;
             }
@@ -43,7 +43,28 @@ public class Tsp {
 
     private static int getCityNumber(){
         System.out.println("Enter city number");
-
         return scan.nextInt();
+    }
+
+    private static void shortestPathCalculation(){
+        int chosenCity;
+        long startTime;
+
+        chosenCity = getCityNumber();
+        startTime = System.currentTimeMillis();
+        System.out.println(ShortestPath.findShortestPath(chosenCity));
+        long time = System.currentTimeMillis() - startTime;
+        System.out.println("Shortest path duration: " + (double)(time / 1000) + "s");
+    }
+
+    private static void bruteForceCalculation(){
+        int chosenCity;
+        long startTime;
+
+        chosenCity = getCityNumber();
+        startTime = System.currentTimeMillis();
+        System.out.println(BruteForce.findShortestPath(Cities.getArrayWithCitiesNumbers(), chosenCity));
+        long time = System.currentTimeMillis() - startTime;
+        System.out.println("Brute force duration: " + (double)(time / 1000) + "s");
     }
 }
