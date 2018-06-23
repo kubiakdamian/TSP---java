@@ -1,46 +1,47 @@
 package tsp;
 
-import java.util.Arrays;
-
 public class ShortestPath {
+    private static City currentCity;
 
     public static double findShortestPath(int cityNumber){
-        double wholeDistance = 0;
-        int currentCityNumber = 56886;
-        City currentCity = Cities.getCities().get(cityNumber);
+        currentCity = Cities.getCities().get(cityNumber);
+        currentCity.setVisited(true);
 
-        while(cityNumber != currentCityNumber) {
-            wholeDistance += calculateSmallestDistance(currentCity);
-            currentCityNumber = checkNearestCityNumber(currentCity);
-            currentCity = Cities.getCities().get(currentCityNumber);
-            currentCity.setVisited(true);
-        }
-
-        return wholeDistance;
+        return calculateWholeDistance();
     }
 
-    private static double calculateSmallestDistance(City currentCity){
-        double distance[] = new double[0];
-        int i = 0;
+    private static double calculateNearestCityDistance(){
+        double distance = Double.MAX_VALUE;
+        City nearestCity = new City();
         for(City city: Cities.getCities()){
             if(!city.isVisited()){
-                distance[i] = Distance.makeCalculations(currentCity, city);
-            }
-            i++;
-        }
-        Arrays.sort(distance);
-        return distance[0];
-    }
-
-    private static int checkNearestCityNumber(City currentCity){
-        int cityNumber = 0;
-        for(City city: Cities.getCities()){
-            if(!city.isVisited()){
-                if(calculateSmallestDistance(currentCity) == Distance.makeCalculations(currentCity, city)){
-                    cityNumber = city.getCityNumber();
+                if(Distance.makeCalculations(currentCity, city) < distance){
+                    distance = Distance.makeCalculations(currentCity, city);
+                    nearestCity = city;
                 }
             }
         }
-        return cityNumber;
+        currentCity = nearestCity;
+        currentCity.setVisited(true);
+        return distance;
+    }
+
+    private static double calculateWholeDistance(){
+        double distance = 0;
+        while(!checkIfAllCitiesAreVisited()){
+            distance += calculateNearestCityDistance();
+        }
+
+        return distance;
+    }
+
+    private static boolean checkIfAllCitiesAreVisited(){
+        boolean visited = true;
+        for(City city : Cities.getCities()){
+            if(!city.isVisited()){
+                visited = false;
+            }
+        }
+        return visited;
     }
 }

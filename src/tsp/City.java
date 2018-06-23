@@ -13,6 +13,8 @@ public class City {
         this.isVisited = false;
     }
 
+    public City(){}
+
     public int getCityNumber() {
         return cityNumber;
     }
