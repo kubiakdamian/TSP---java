@@ -1,20 +1,23 @@
 package tsp;
 
 public class BruteForce {
-    public static void permute(int[] arr, int startingElement){
-        permuteHelper(arr, startingElement, 0);
+    private static double distance;
+    private static double result;
+
+    public static double findShortestPath(int[] arr, int startingElement){
+        result = Double.MAX_VALUE;
+        return permuteHelper(arr, startingElement, 0);
     }
 
-    private static void permuteHelper(int[] arr, int startingElement, int index){
+    private static double permuteHelper(int[] arr, int startingElement, int index){
+        distance = 0;
         if(index >= arr.length - 1){
-            System.out.print("[");
             for(int i = 0; i < arr.length - 1; i++){
-                System.out.print(arr[i] + ", ");
+                distance += Distance.makeCalculations(Cities.getCities().get(arr[i]), Cities.getCities().get(arr[i + 1]));
             }
-            if(arr.length > 0)
-                System.out.print(arr[arr.length - 1]);
-            System.out.println("]");
-            return;
+            if(distance < result){
+                result = distance;
+            }
         }
 
         for(int i = index; i < arr.length; i++){
@@ -30,5 +33,7 @@ public class BruteForce {
             arr[index] = arr[i];
             arr[i] = t;
         }
+
+        return result;
     }
 }

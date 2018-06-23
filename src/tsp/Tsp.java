@@ -30,8 +30,9 @@ public class Tsp {
                     break;
                 case 4:
                     System.out.println(ShortestPath.findShortestPath(getCityNumber()));
+                    break;
                 case 5:
-                    BruteForce.permute(Cities.getArrayWithCitiesNumbers(), 2);
+                    System.out.println(BruteForce.findShortestPath(Cities.getArrayWithCitiesNumbers(), getCityNumber()));
                 default:
                     break;
             }
