@@ -39,4 +39,15 @@ public class Cities {
             city.setVisited(false);
         }
     }
+
+    public static int[] getArrayWithCitiesNumbers(){
+        int numbers[] = new int[cities.size()];
+        int i = 0;
+        for(City city : cities){
+            numbers[i] = city.getCityNumber();
+            i++;
+        }
+
+        return numbers;
+    }
 }

@@ -14,7 +14,8 @@ public class Tsp {
                     "1. To add city.\n" +
                     "2. To print cities.\n" +
                     "3. Calculate distance between 2 cities.\n" +
-                    "4. Calculate whole distance with shortest path\n");
+                    "4. Calculate whole distance with shortest path\n" +
+                    "5. Calculate whole distance with brute force");
 
             chosenOption = scan.nextInt();
             switch (chosenOption){
@@ -29,6 +30,8 @@ public class Tsp {
                     break;
                 case 4:
                     System.out.println(ShortestPath.findShortestPath(getCityNumber()));
+                case 5:
+                    BruteForce.permute(Cities.getArrayWithCitiesNumbers(), 2);
                 default:
                     break;
             }
