@@ -6,8 +6,9 @@ public class ShortestPath {
     public static double findShortestPath(int cityNumber){
         currentCity = Cities.getCities().get(cityNumber);
         currentCity.setVisited(true);
-
-        return calculateWholeDistance();
+        double distance = calculateWholeDistance();
+        Cities.setCitiesAsUnvisited();
+        return distance;
     }
 
     private static double calculateNearestCityDistance(){

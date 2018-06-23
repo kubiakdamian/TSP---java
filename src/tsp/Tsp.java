@@ -28,12 +28,18 @@ public class Tsp {
                     System.out.println(Distance.calculateDistance());
                     break;
                 case 4:
-                    System.out.println(ShortestPath.findShortestPath(0));
+                    System.out.println(ShortestPath.findShortestPath(getCityNumber()));
                 default:
                     break;
             }
         }
 
         scan.close();
+    }
+
+    private static int getCityNumber(){
+        System.out.println("Enter city number");
+
+        return scan.nextInt();
     }
 }

@@ -33,4 +33,10 @@ public class Cities {
         System.out.println("Enter coordinate Y");
         return Tsp.scan.nextInt();
     }
+
+    public static void setCitiesAsUnvisited(){
+        for(City city : cities){
+            city.setVisited(false);
+        }
+    }
 }
